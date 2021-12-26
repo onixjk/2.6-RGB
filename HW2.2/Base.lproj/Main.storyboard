@@ -47,7 +47,7 @@
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Q9I-fE-rnA">
                                                 <rect key="frame" x="110" y="0.0" width="288" height="42"/>
                                                 <connections>
-                                                    <action selector="rgbSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="rLI-W4-ux5"/>
+                                                    <action selector="rgbSlider" destination="BYZ-38-t0r" eventType="valueChanged" id="MGO-s8-l6M"/>
                                                 </connections>
                                             </slider>
                                         </subviews>
@@ -76,7 +76,7 @@
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="I5h-cN-86m">
                                                 <rect key="frame" x="110" y="0.0" width="288" height="41.666666666666664"/>
                                                 <connections>
-                                                    <action selector="rgbSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="dL1-M4-qsZ"/>
+                                                    <action selector="rgbSlider" destination="BYZ-38-t0r" eventType="valueChanged" id="MmJ-7L-Srf"/>
                                                 </connections>
                                             </slider>
                                         </subviews>
@@ -105,7 +105,7 @@
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bcJ-uV-Bbt">
                                                 <rect key="frame" x="110" y="0.0" width="288" height="42"/>
                                                 <connections>
-                                                    <action selector="rgbSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="jzA-HK-7O6"/>
+                                                    <action selector="rgbSlider" destination="BYZ-38-t0r" eventType="valueChanged" id="l4g-gu-0gi"/>
                                                 </connections>
                                             </slider>
                                         </subviews>
@@ -131,16 +131,16 @@
                     <connections>
                         <outlet property="blueLabel" destination="sob-rV-Rpb" id="2hQ-rx-0vL"/>
                         <outlet property="blueSlider" destination="bcJ-uV-Bbt" id="Okg-UQ-p1Q"/>
+                        <outlet property="colorView" destination="iTS-1a-qlG" id="sFc-9x-Kf9"/>
                         <outlet property="greenLabel" destination="5Tv-V4-Cfn" id="PFv-fl-y3s"/>
                         <outlet property="greenSlider" destination="I5h-cN-86m" id="yof-Ax-a4t"/>
-                        <outlet property="mainView" destination="iTS-1a-qlG" id="sFc-9x-Kf9"/>
                         <outlet property="redLabel" destination="hpy-vx-AxK" id="FnN-jL-Fqn"/>
                         <outlet property="redSlider" destination="Q9I-fE-rnA" id="zVy-Tl-N0l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-8092" y="-6982"/>
+            <point key="canvasLocation" x="-8344" y="-7138"/>
         </scene>
     </scenes>
     <resources>
