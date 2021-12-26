@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,21 +13,21 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HW2_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iTS-1a-qlG">
-                                <rect key="frame" x="16" y="64" width="396" height="200"/>
+                                <rect key="frame" x="16" y="64" width="382" height="193.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sUW-D0-tYG">
-                                <rect key="frame" x="16" y="294" width="396" height="130"/>
+                                <rect key="frame" x="16" y="287.5" width="382" height="130"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PYt-mM-LW4">
-                                        <rect key="frame" x="0.0" y="0.0" width="396" height="41"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="40.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w7q-ut-4gJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="60" height="41"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="40.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="q3H-QM-Y6O"/>
                                                 </constraints>
@@ -36,7 +36,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpy-vx-AxK">
-                                                <rect key="frame" x="68" y="0.0" width="36" height="41"/>
+                                                <rect key="frame" x="68" y="0.0" width="36" height="40.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="36" id="4hU-Q0-6hD"/>
                                                 </constraints>
@@ -45,7 +45,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Q9I-fE-rnA">
-                                                <rect key="frame" x="110" y="0.0" width="288" height="42"/>
+                                                <rect key="frame" x="110" y="0.0" width="274" height="41.5"/>
                                                 <connections>
                                                     <action selector="rgbSlider" destination="BYZ-38-t0r" eventType="valueChanged" id="MGO-s8-l6M"/>
                                                 </connections>
@@ -53,10 +53,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wfh-9Q-fee">
-                                        <rect key="frame" x="0.0" y="44.666666666666686" width="396" height="40.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="382" height="41"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Green:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggq-iH-Qu9">
-                                                <rect key="frame" x="0.0" y="0.0" width="60" height="40.666666666666664"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="41"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="8Xv-nL-D1y"/>
                                                 </constraints>
@@ -65,7 +65,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Tv-V4-Cfn">
-                                                <rect key="frame" x="68" y="0.0" width="36" height="40.666666666666664"/>
+                                                <rect key="frame" x="68" y="0.0" width="36" height="41"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="36" id="jVq-g7-wLG"/>
                                                 </constraints>
@@ -74,7 +74,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="I5h-cN-86m">
-                                                <rect key="frame" x="110" y="0.0" width="288" height="41.666666666666664"/>
+                                                <rect key="frame" x="110" y="0.0" width="274" height="42"/>
                                                 <connections>
                                                     <action selector="rgbSlider" destination="BYZ-38-t0r" eventType="valueChanged" id="MmJ-7L-Srf"/>
                                                 </connections>
@@ -82,10 +82,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="oZI-jg-4cT">
-                                        <rect key="frame" x="0.0" y="89" width="396" height="41"/>
+                                        <rect key="frame" x="0.0" y="89.5" width="382" height="40.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blue:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GzZ-lt-Jgv">
-                                                <rect key="frame" x="0.0" y="0.0" width="60" height="41"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="40.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="4FF-gK-fxZ"/>
                                                 </constraints>
@@ -94,7 +94,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sob-rV-Rpb">
-                                                <rect key="frame" x="68" y="0.0" width="36" height="41"/>
+                                                <rect key="frame" x="68" y="0.0" width="36" height="40.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="36" id="L2l-Wy-8rz"/>
                                                 </constraints>
@@ -103,7 +103,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bcJ-uV-Bbt">
-                                                <rect key="frame" x="110" y="0.0" width="288" height="42"/>
+                                                <rect key="frame" x="110" y="0.0" width="274" height="41.5"/>
                                                 <connections>
                                                     <action selector="rgbSlider" destination="BYZ-38-t0r" eventType="valueChanged" id="l4g-gu-0gi"/>
                                                 </connections>
@@ -140,7 +140,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-8344" y="-7138"/>
+            <point key="canvasLocation" x="-8842" y="-7487"/>
         </scene>
     </scenes>
     <resources>
