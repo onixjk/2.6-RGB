@@ -9,8 +9,6 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    //MARK: - IB Outlets
-    
     @IBOutlet weak var colorView: UIView!
     
     @IBOutlet weak var redLabel: UILabel!
@@ -21,47 +19,44 @@ class ViewController: UIViewController {
     @IBOutlet weak var greenSlider: UISlider!
     @IBOutlet weak var blueSlider: UISlider!
     
-    //MARK: - Override Methods
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         colorView.layer.cornerRadius = 15
         
-        setColor()
+        changeMinTrackTintColor(for: redSlider, greenSlider, blueSlider)
+        changeMaxTrackTintColor(for: redSlider, greenSlider, blueSlider)
+        
+        changeColor()
         setValue(for: redLabel, greenLabel, blueLabel)
     }
     
-    //MARK: - IB Actions
-    
-    @IBAction func rgbSlider(_ slider: UISlider) {
-        setColor()
-        switch slider {
+    @IBAction func rgbSlider(_ sender: UISlider) {
+        changeColor()
+        switch sender {
             case redSlider:
-                redLabel.text = getString(redSlider)
+                redLabel.text = getStringSliderValue(for: redSlider)
             case greenSlider:
-                greenLabel.text = getString(greenSlider)
+                greenLabel.text = getStringSliderValue(for: greenSlider)
             default:
-                blueLabel.text = getString(blueSlider)
+                blueLabel.text = getStringSliderValue(for: blueSlider)
         }
     }
     
-    //MARK: - Private Methods
-    
-    private func changeMinTrackTinColor(for sliders: UISlider...) {
+    private func changeMinTrackTintColor(for sliders: UISlider...) {
         sliders.forEach { slider in
             switch slider {
                 case redSlider:
-                    redSlider.minimumTrackTintColor = .systemRed
+                    redSlider.minimumTrackTintColor = .red
                 case greenSlider:
-                    greenSlider.minimumTrackTintColor = .systemGreen
+                    greenSlider.minimumTrackTintColor = .green
                 default:
                     blueSlider.minimumTrackTintColor = .blue
             }
         }
     }
     
-    private func changeMaxTrackTinColor (for sliders: UISlider...) {
+    private func changeMaxTrackTintColor(for sliders: UISlider...) {
         sliders.forEach { slider in
             switch slider {
                 case redSlider:
@@ -78,23 +73,23 @@ class ViewController: UIViewController {
         labels.forEach { label in
             switch label {
                 case redLabel:
-                    redLabel.text = getString(redSlider)
+                    redLabel.text = getStringSliderValue(for: redSlider)
                 case greenLabel:
-                    greenLabel.text = getString(greenSlider)
+                    greenLabel.text = getStringSliderValue(for: greenSlider)
                 default:
-                    blueLabel.text = getString(blueSlider)
+                    blueLabel.text = getStringSliderValue(for: blueSlider)
             }
         }
     }
     
-    private func setColor() {
+    private func changeColor() {
         colorView.backgroundColor = UIColor(red: CGFloat(redSlider.value),
                                             green: CGFloat(greenSlider.value),
                                             blue: CGFloat(blueSlider.value),
                                             alpha: 1)
     }
     
-    private func getString(_ slider: UISlider) -> String {
-        String(format: "%.2f", slider.value)
+    private func getStringSliderValue(for slider: UISlider) -> String {
+        String(format:"%.2f", slider.value)
     }
 }
