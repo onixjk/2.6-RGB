@@ -156,11 +156,15 @@ class SettingsViewController: UIViewController {
         String(format:"%.2f", slider.value)
     }
     
-    private func showAlert(with title: String, and message: String) {
+    private func showAlert(for textField: UITextField,
+                           with title: String,
+                           and message: String) {
         let alert = UIAlertController(title: title,
                                       message: message,
                                       preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            textField.text = ""
+        }
         
         present(alert, animated: true)
         alert.addAction(okAction)
@@ -193,21 +197,25 @@ extension SettingsViewController: UITextFieldDelegate {
         guard let text = textField.text else { return }
         
         if let value = Float(text) {
-            switch textField {
-                case redValueTextField:
-                    redSlider.setValue(value, animated: true)
-                    setValueLabel(for: redValueLabel)
-                case greenValueTextField:
-                    greenSlider.setValue(value, animated: true)
-                    setValueLabel(for: greenValueLabel)
-                default:
-                    blueSlider.setValue(value, animated: true)
-                    setValueLabel(for: blueValueLabel)
+            if value >= 0.0 && value <= 1.0 {
+                switch textField {
+                    case redValueTextField:
+                        redSlider.setValue(value, animated: true)
+                        setValueLabel(for: redValueLabel)
+                    case greenValueTextField:
+                        greenSlider.setValue(value, animated: true)
+                        setValueLabel(for: greenValueLabel)
+                    default:
+                        blueSlider.setValue(value, animated: true)
+                        setValueLabel(for: blueValueLabel)
+                }
+                setColor()
+                return
             }
-            setColor()
-            return
         }
-        showAlert(with: "Wrong format!", and: "Please enter correct value")
+        showAlert(for: textField,
+                     with: "Wrong format!",
+                     and: "Please enter correct value")
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
